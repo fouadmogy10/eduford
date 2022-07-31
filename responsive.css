@@ -1,0 +1,345 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+.cont{
+    width: 90%;
+    margin: auto;
+}
+body{
+    overflow-x: hidden;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,.7),rgba(4,9,30,.7)),url(eduford_img/banner.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 0%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav_links{
+    flex: 1;
+    text-align: right;
+}
+.nav_links ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav_links ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 13px;
+}
+.nav_links ul li::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color:#aa0b00 ;
+    display: block;
+    margin: auto;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+.nav_links ul li:hover::after{
+    width: 80%;
+}
+.textbox{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+}
+.textbox p{
+    font-size: 18px;
+    padding: 35px 0px;
+    color: rgb(207, 207, 207);
+}
+.textbox a{
+    text-decoration: none;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 20px;
+    font-size: 12px;
+    position: relative;
+    transition: .5s;
+    
+}
+.textbox a::after {
+    content: "";
+    background-color: white;
+    width: 20px;
+    height: 1px;
+    position: absolute;
+    top: 15px;
+    right: -13px;
+    transition: .5s;
+}
+.textbox a::before {
+    content: "";
+    background-color: white;
+    width: 20px;
+    height: 1px;
+    position: absolute;
+    top: 15px;
+    left: -13px;
+    transition: .5s;
+}
+.textbox a:hover{
+    color: white;
+}
+.textbox a:hover::before,.textbox a:hover::after,.textbox a:hover{
+    background: #f44336;
+}
+/**********media quary**************/
+nav .fa{
+    display: none;
+}
+@media (max-width:700px) {
+    .textbox h1{
+        font-size: 31px;
+    }
+    .nav_links ul li{
+        display: block;
+        text-align: center;
+    }
+    .nav_links {
+        position: absolute;
+        background-color: rgb(88, 6, 0);
+        height: 100vh;
+        width:200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2; 
+        transition: .5s ease;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        width: 10px;
+        cursor: pointer;
+        font-size: 22px;
+
+    }
+    .nav_links ul{
+        padding: 30px;
+    }
+    
+    
+}
+/********************course content************************/
+.text_tit{
+    padding: 60px 0px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.text_tit p{
+    color: rgb(87, 87, 87);
+    font-size:15px ;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px 40px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+.cards{
+    font-size: 15px;
+    
+    padding: 32px;
+    min-height: 200px;
+    color: rgb(102, 102, 102);
+    border-radius: 0 15px;
+    line-height: 1.7rem;
+    background-color: rgb(255 241 241);
+    transition: .5s;
+    
+}
+.cards:hover{
+    box-shadow: 8px 11px 4px -2px #cccccc;
+}
+.card{
+    transition: .5s;
+}
+.card:hover{
+    box-shadow: 8px 11px 4px -2px #cccccc;
+}
+.content .cards h4{
+    font-size: 20px;
+    color: black;
+}
+/************media****************/
+@media (max-width:768px) {
+    .content{
+        display: block;
+    }
+    .cards{
+        margin: 20px;
+    }
+    .imgs{
+        flex-direction: column;
+    }
+    .facilitis{
+        flex-direction: column;
+    }
+    .users{
+        flex-direction: column;
+    }
+    .text_tit h3{
+        font-size: 20px;
+    }
+    .enroll h2{
+        font-size: 15px;
+        
+    }
+    
+    
+}
+/**********************compus*************/
+.imgs{
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+}
+.compus-col{
+    flex-basis: 32%;
+    max-height: 400px;
+    margin-bottom: 5%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.compus-col img{
+    width: 100%;
+}
+.layer{
+    background-color:rgba(244,67,54,.0) ;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transition: font-size .1s;
+    transition: .5s;
+    font-size: 1px;
+    color: rgba(247, 247, 247, 0.0);
+}
+.layer:hover{
+    background-color:rgba(255, 17, 0, 0.5) ;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+.layer h3{
+    transform: translate(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.facilitis{
+    display: flex;
+    margin-top: 5% 3%;
+    justify-content: space-between;
+
+}
+.card{
+    margin: 20px 25px;
+    border: none;
+    text-align: center;
+}
+.card-body h4{
+    font-size: 14px;
+    color: black;
+} 
+.card-body p{
+    color: #c1c1c1;
+}
+
+/*********************comment******************/
+.media{
+    background-color:#ff90881a;
+    margin-bottom: 20px;border-radius: 10px;
+}
+.media .star .fa{
+    color: rgb(231, 231, 4);
+
+}
+.users{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    min-width: 200px;
+}
+.user{
+    border-radius: 10px;
+    margin: 10px 20px;
+    padding: 24px 86px;
+    background-color:#ff90881a;
+    text-align: left;
+}
+.user2{
+    position: relative;
+}
+.user img {
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 35px;
+    left: 33px;
+}
+.user h3{
+    font-size: 15px;
+    color: black;
+}
+.user p{
+    color: rgb(100, 100, 100);
+}
+.user .fa{
+    color: rgb(231, 231, 4);
+}
+/********************enroll*************************/
+.enroll{
+    width: 75%;
+    margin: auto;
+    margin-top: 66px;
+    margin-bottom: 60px;;
+    min-height: 60vh;
+    background-image: linear-gradient(rgba(4,9,30,.7),rgba(4,9,30,.7)),url(eduford_img/banner.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+border-radius: 15px;
+
+}
+.enroll h2{
+    font-size: 28px;
+    padding-bottom: 20px;
+}
+.enroll:hover a{
+    color: white;
+}
